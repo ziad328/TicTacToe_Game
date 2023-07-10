@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.AddPlayersActivity"
+    android:background="@color/Blue">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:layout_margin="25dp"
+            android:weightSum="4"
+            android:background="@drawable/board"
+            app:layout_constraintHeight_percent="0.5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/enter_players_names"
+                android:textAlignment="center"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:textColor="@color/Blue"
+                android:layout_marginStart="10dp"
+                android:shadowColor="@color/black"
+                android:elevation="10dp"/>
+            <EditText
+                android:id="@+id/playerOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:autofillHints="name"
+                android:background="@drawable/players_names_box"
+                android:drawablePadding="10dp"
+                android:layout_weight="1"
+                android:drawableStart="@drawable/player_1"
+                android:hint="@string/enter_player_1_name"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:layout_marginStart="10dp"
+                android:textStyle="italic"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black_transparent60" />
+
+            <EditText
+                android:id="@+id/playerTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:autofillHints="name"
+                android:background="@drawable/players_names_box"
+                android:drawableStart="@drawable/player_2"
+                android:drawablePadding="8dp"
+                android:layout_marginStart="10dp"
+
+                android:layout_weight="1"
+
+                android:hint="@string/enter_player_2_name"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black_transparent60"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/startGameButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:padding="15dp"
+                android:shadowColor="@color/black"
+                android:text="@string/start_game"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+
+                android:backgroundTint="@color/Blue"
+                app:cornerRadius="20dp" />
+
+        </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
