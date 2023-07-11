@@ -8,76 +8,81 @@
     tools:context=".ui.PlaygroundActivity">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/playersLinearLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_margin="25dp"
         android:orientation="horizontal"
-        android:padding="24dp"
         android:weightSum="2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
+            android:id="@+id/playerOneLinearLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:weightSum="2"
+            tools:background="@drawable/black_border">
+
 
             <ImageView
                 android:id="@+id/imageX"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/blue_border"
-                android:src="@drawable/player_1_for_text"
-                app:layout_constraintEnd_toStartOf="@+id/imageo"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:paddingTop="10dp"
+                android:src="@drawable/player_1_for_text" />
 
             <TextView
                 android:id="@+id/playerOneName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="-30dp"
-                android:padding="3dp"
                 android:gravity="center"
+                android:layout_weight="1"
                 android:text="@string/player_one"
                 android:textColor="@color/black"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@id/imageX"
-                app:layout_constraintStart_toStartOf="@id/imageX"
-                app:layout_constraintTop_toBottomOf="@id/imageX" />
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/playerTwoLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/blue_border"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:weightSum="2">
 
 
             <ImageView
                 android:id="@+id/imageo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/blue_border"
-                android:src="@drawable/player_2_for_text"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/imageX"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:paddingTop="10dp"
+                android:src="@drawable/player_2_for_text" />
 
             <TextView
                 android:id="@+id/playerTwoName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="-30dp"
-                android:padding="3dp"
                 android:gravity="center"
+                android:layout_weight="1"
                 android:text="@string/player_two"
                 android:textColor="@color/black"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@id/imageo"
-                app:layout_constraintStart_toStartOf="@id/imageo"
-                app:layout_constraintTop_toBottomOf="@id/imageo" />
+                android:textStyle="bold" />
+        </LinearLayout>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     </LinearLayout>

@@ -3,13 +3,13 @@ package com.example.tictactoe.ui;
 import static com.example.tictactoe.ui.AddPlayersActivity.player1;
 import static com.example.tictactoe.ui.AddPlayersActivity.player2;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.tictactoe.R;
 import com.example.tictactoe.databinding.ActivityPlaygroundBinding;
@@ -115,11 +115,11 @@ public class PlaygroundActivity extends AppCompatActivity {
     private void changePlayerTurn(int currentPlayerTurn) {
         playerTurn = currentPlayerTurn;
         if (playerTurn == 1) {
-            binding.playerOneName.setBackgroundResource(R.drawable.black_border);
-            binding.playerTwoName.setBackgroundResource(R.drawable.blue_border);
+            binding.playerOneLinearLayout.setBackgroundResource(R.drawable.black_border);
+            binding.playerTwoLinearLayout.setBackgroundResource(R.drawable.blue_border);
         } else {
-            binding.playerTwoName.setBackgroundResource(R.drawable.black_border);
-            binding.playerOneName.setBackgroundResource(R.drawable.blue_border);
+            binding.playerTwoLinearLayout.setBackgroundResource(R.drawable.black_border);
+            binding.playerOneLinearLayout.setBackgroundResource(R.drawable.blue_border);
         }
     }
 
